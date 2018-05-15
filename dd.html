@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+
+</head>
+<body>
+<h3>Example 3: (Three RSS feeds, 9 entries, "<code>datetime</code>" and "<code>snippet</code>" fields enabled, sort by <code>date</code>, display as <code>p</code>)</h3>
+<h4>BBC Front Page News <br />MSNBC News<br />Yahoo News Top Stories</h4>
+<script type="text/javascript">
+    var newsfeed=new gfeedfetcher("example3", "example3class", "_new")
+    newsfeed.addFeed("BBC", "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml") //Specify "label" plus URL to RSS feed
+    newsfeed.addFeed("MSNBC", "http://www.msnbc.msn.com/id/3032091/device/rss/rss.xml") //Specify "label" plus URL to RSS feed
+    newsfeed.addFeed("Yahoo News", "http://rss.news.yahoo.com/rss/topstories") //Specify "label" plus URL to RSS feed
+    newsfeed.displayoptions("label datetime snippet") //show the specified additional fields
+    newsfeed.setentrycontainer("p") //Display each entry as a paragraph
+    newsfeed.filterfeed(9, "label", "date") //Show 9 entries, sort by date
+    newsfeed.init() //Always call this last
+</script>
+</body>
+</html>

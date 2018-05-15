@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kk</title>
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+
+    <script type="text/javascript" src="gfeedfetcher.js"></script>
+
+    <script type="text/javascript" src="gajaxticker.js">
+
+        /***********************************************
+         * gAjax RSS Ticker- (c) Dynamic Drive (www.dynamicdrive.com)
+         * Requires "gfeedfetcher.js" class
+         * Please keep this notice intact
+         * Visit http://www.dynamicdrive.com/ for full source code
+         ***********************************************/
+
+    </script>
+
+    <style type="text/css">
+
+        .titlefield{ /*CSS for RSS title link in general*/
+            text-decoration: none;
+        }
+
+        .labelfield{ /*CSS for label field in general*/
+            color:brown;
+            font-size: 90%;
+        }
+
+        .datefield{ /*CSS for date field in general*/
+            color:gray;
+            font-size: 90%;
+        }
+
+        #example2{ /*Demo 2 main container*/
+            width: 600px;
+            height: 180px;
+            overflow: auto;
+            border: 1px dashed black;
+            padding: 4px;
+            background-color: #EEEEEE;
+        }
+
+        #example2 ul{ /*Demo 2 UL container*/
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        #example2 ul li{ /*Demo 2 LI that surrounds each entry*/
+            margin-bottom: 4px;
+        }
+
+        #example3{ /*Demo 3 main container*/
+            width: 600px;
+            height: 280px;
+            overflow: auto;
+            border: 1px solid navy;
+            padding: 4px;
+        }
+
+        #example3 p{ /*Demo 3 P element that separates each entry*/
+            margin-top: 0;
+            margin-bottom: 7px;
+        }
+
+        code{ /*CSS for insructions*/
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+
+<h3>Example 3: (Three RSS feeds, 8 entries, "<code>datetime</code>" and "<code>snippet</code>" fields enabled, 2 entries per page</h3>
+
+<div>
+<script type="text/javascript">
+
+    var newsfeed=new gfeedrssticker("example3", "example3class", 2500, "_new")
+    newsfeed.addFeed("BBC", "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml") //Specify "label" plus URL to RSS feed
+    newsfeed.addFeed("MSNBC", "http://www.msnbc.msn.com/id/3032091/device/rss/rss.xml") //Specify "label" plus URL to RSS feed
+    newsfeed.addFeed("Yahoo News", "http://rss.news.yahoo.com/rss/topstories") //Specify "label" plus URL to RSS feed
+    newsfeed.displayoptions("datetime snippet") //show the specified additional fields
+    newsfeed.setentrycontainer("p") //Display each entry as a paragraph
+    newsfeed.filterfeed(8, "date") //Show 8 entries, sort by date
+    newsfeed.entries_per_page(10)
+    newsfeed.init() //Always call this last
+
+</script>
+</div>
+
+</body>
+</html>

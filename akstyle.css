@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {
+    background-color:#E3FDF8;
+}
+
+h1	{
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1.5em;
+    color:#5C5C5C;
+}
+
+h2 {
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:1.2em;
+    color:#606060;
+    margin: 25px;
+}
+
+a {
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: .75em;
+    text-decoration:none;
+    color:#323232;
+}
+
+a:hover {
+    text-decoration:underline;
+    color:#352DCE;
+    background-color:#efecec;
+}
+
+ul {
+    list-style:circle;
+    margin-left:-15px;
+}
+
+
+
+#feedControl, #feedControlTwo {
+    width: 580px;
+    height: 300px;
+    padding: 8px 10px;
+}
+
+.gfg-title {
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
+    color:#666;
+    margin: -5px;
+}
+
+
+.gf-title {
+    font-family:"Courier New", Courier, monospace;
+    font-size: 1em;
+    font-weight: 500;
+    color: #900;
+}
+
+.gf-list {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: .85em;
+    margin-top: 5px;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.gf-relativePublishedDate {
+    font-weight:bold;
+}
+
+.gf-snippet {
+    font-family: Verdana, Geneva, sans-serif;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1em;
+    line-height: 1.3em;
+}
+
+
